@@ -13,6 +13,7 @@ function Home() {
         quo aliquam aut voluptates molestiae impedit, excepturi facilis esse,
         officia nesciunt.
       </p>
+      <SelfIntro />
     </div>
   );
 }

@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import { Document, Page } from "react-pdf";
+import pdf from "./assets/resume.pdf";
 
-const resumeLink =
-  "https://raw.githubusercontent.com/github-name/pdf-renderer/main/src/assets/resume.pdf";
+const resumeLink = new URL(
+  "https://raw.githubusercontent.com/mohd-faisal07/portfolio/main/src/assets/resume.pdf"
+);
 
 function Resume() {
   const [width, setWidth] = useState(1200);
@@ -13,7 +15,7 @@ function Resume() {
   }, []);
 
   return (
-    <Document file={resumeLink} className="">
+    <Document file={resumeLink} className="border border-red rounded-md">
       <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} />
     </Document>
   );
